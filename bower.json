@@ -1,0 +1,14 @@
+{
+  "name": "php_yii2_angular",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "n"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-material": "^1.1.4"
+  }
+}

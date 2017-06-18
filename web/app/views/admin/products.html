@@ -1,0 +1,63 @@
+<div layout="row" ng-cloak md-theme="blue">
+    <div flex="10"></div>
+
+    <div flex="80" class='m-20px-0'>
+
+        <!-- page title & 'create product' button -->
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <!-- page title -->
+                <div flex md-truncate>
+                    <h3 class="md-headline">Products</h3>
+                </div>
+
+                <!-- 'create' product button will be here -->
+            </div>
+        </md-toolbar>
+
+        <!-- 'search' bar will be here -->
+
+        <md-content flex>
+            <!-- show product record list -->
+            <md-list ng-init="readProducts()">
+                <md-list-item class="md-3-line" ng-repeat="product in products">
+
+                    <!-- product information -->
+                    <div class="md-list-item-text">
+                        <h3>{{product.name}}</h3>
+                        <h4>{{product.description}}</h4>
+                        <p>${{product.price}}</p>
+                    </div>
+
+                    <!-- 'read one', 'edit' and 'delete' buttons -->
+                    <div class="md-secondary-container">
+                        <!-- 'edit' button will be here -->
+                        <md-button class="md-icon-button" ng-click="editProduct(product.id)">
+                            <i class="material-icons">create</i>
+                        </md-button>
+                        <md-button class="md-icon-button md-danger" ng-click="confirmDeleteProduct(event, product.id)">
+                            <i class="material-icons">clear</i>
+                        </md-button>
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+
+    <div flex="10"></div>
+</div>
+<!-- end row -->
+<md-fab-speed-dial class="md-fab-bottom-right md-scale" md-open="isOpen" md-direction="up">
+    <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-warn ">
+            <i class="material-icons">menu</i>
+        </md-button>
+    </md-fab-trigger>
+
+    <md-fab-actions>
+        <md-button ng-click="showCreateProductForm()" aria-label="Add product" class="md-fab md-raised md-mini">
+            <i class="material-icons">note_add</i>
+        </md-button>
+    </md-fab-actions>
+</md-fab-speed-dial>

@@ -1,0 +1,20 @@
+{
+  "name": "php_anjular",
+  "version": "1.0.0",
+  "description": "learning angular with php",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-uglify": "^2.1.2",
+    "gulp-useref": "^3.1.2"
+  }
+}
